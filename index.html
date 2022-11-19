@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery勉強会</title>
+    <!-- http://semooh.jp/jquery/ -->
+</head>
+<body>
+    <h1 id="greeting">Hello,World!</h1>
+    <a href="https://twitter.com"></a>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <input type="text" id="hogeText" value="もうちょいで始まる">
+    <input type="button" value="hello大文字" id="button_hello">
+    <p class="hello">Hello</p>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+    </script>
+        <script>
+            var a = 1;
+            var b = 3;
+            var c = a + b;
+
+            // valueの値を格納して取り出す
+            const inputValue = $('#hogeText').val()
+            console.log(inputValue);
+
+            // helloクラス追加されていますか？　いませんか
+            const existsHello = $('.hello').hasClass('hello')
+            console.log(existsHello);
+
+            // hello buttonクリック時に大文字にする
+            $('#button_hello').on('click',function(){
+                $('.hello').text('HELLO')
+            })
+
+            // タグ全取得
+            $('div')
+
+            // 属性買えちゃうよ
+            const name = $('hogeText').attr('name');
+
+            // alert(c);
+            // console.log(c);
+
+            //if (confirm("計算します")){
+                // True
+              //  alert("計算結果は"+ c+ "です。");
+            ///} else {
+                // False
+               /// alert("計算をキャンセルしました")
+            ///}
+            //for(var i=1; i<10; i++){
+              //  alert(i + "回目のループ実行です。")
+            //}
+            // document.getElementByを　オブジェクト指向
+            //    document.getElementById('greeting').innerHTML = "Nice to meet you!";
+            // # →　id
+                //$("#greeting").text("Nice to meet you!")
+
+                //$("#greeting").css('color', 'red');
+
+                //$("#greeting").addClass('scaled');
+
+                //$("a").attr('href', 'https://google.com').text("Google");
+
+                //$('.list').append(html);
+                //$('.list').find('li:contains(8)').remove();
+                //$('.list').find('li:contains(10)').addClass('hoge');
+
+                //$('#greeting').on('click',function(){
+                  //  $("#greeting").css('color', 'red');
+
+                    //var html = "<li>6</li><li>7</li><li>8</li><li>9</li><li>10</li>";
+                //});
+
+        </script>
+</body>
+</html>
